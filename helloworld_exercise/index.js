@@ -7,13 +7,15 @@ schema {
 }
 type Query {
   hello: String
+  name: String
 }
 `;
 
 const resolvers = {
   Query: {
-    hello: () => 'World'
-  }
+    hello: () => 'World',
+    name: () => 'MKM',
+  },
 };
 
 const schema = makeExecutableSchema({ typeDefs, resolvers });
